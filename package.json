@@ -5,7 +5,9 @@
   "repository": "git@gitlab.com:azeti1/borabora/commons.git",
   "main": "dist/index.ts",
   "files": [
-    "dist"
+    "dist",
+    "index.ts",
+    "tsconfig.json"
   ],
   "engines": {
     "node": ">=16.14.0 <=17.4.0"
