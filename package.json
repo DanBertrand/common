@@ -7,7 +7,10 @@
   "files": [
     "dist",
     "index.ts",
-    "tsconfig.json"
+    "tsconfig.json",
+    ".eslintrc.json",
+    "merge.js",
+    "marge.sh"
   ],
   "engines": {
     "node": ">=16.14.0 <=17.4.0"
