@@ -2,7 +2,6 @@ const fs = require("fs");
 // console.log(process);
 console.log(process.argv[2]);
 
-return;
 const sharedPackage = require("./package.json");
 const localPackage = require("../../../package.json");
 
