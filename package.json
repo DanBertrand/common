@@ -21,8 +21,8 @@
     "bundle": "NODE_ENV=production webpack",
     "copy": "$PWD/bin/copy.sh",
     "overwrite": "node overwrite.js",
-    "build": "yarn bundle && yarn copy && yarn overwrite",
-    "preinstall": "echo PreInstall in $INIT_CWD ..."
+    "build": "NODE_ENV=production webpack",
+    "preinstall": "node merge.js"
   },
   "dependencies": {
     "@mui/material": "^5.4.0",
