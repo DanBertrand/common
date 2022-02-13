@@ -22,7 +22,7 @@
     "copy": "$PWD/bin/copy.sh",
     "overwrite": "node overwrite.js",
     "build": "yarn bundle && yarn copy && yarn overwrite",
-    "test": "./merge.sh"
+    "preinstall": "echo PreInstall in $INIT_CWD ..."
   },
   "dependencies": {
     "@mui/material": "^5.4.0",
