@@ -1,9 +1,10 @@
 const fs = require("fs");
-// console.log(process);
-console.log(process.argv[2]);
+const localePackagePath = "../../../package.json";
+
+if (!fs.existsSync(localePackagePath)) return;
 
 const sharedPackage = require("./package.json");
-const localPackage = require("../../../package.json");
+const localPackage = require(localePackagePath);
 
 // Create empty peerDependencies if doesnt exist
 if (!localPackage.peerDependencies) {
@@ -28,11 +29,7 @@ for (const [key, value] of Object.entries(sharedPackage.devDependencies)) {
 }
 
 // Write the file with the modifications
-fs.writeFileSync(
-  "../../../package.json",
-  JSON.stringify(localPackage, null, 2)
-);
-
+fs.writeFileSync(localePackagePath, JSON.stringify(localPackage, null, 2));
 // prettier condig + extend eslint
 //  name of the plugin
 
