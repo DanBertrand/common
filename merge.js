@@ -19,10 +19,10 @@ if (!localPackage.devDependencies) {
 }
 
 // Merge devDependencies to the the locale package.json devDependencies when the package is downloaded
-const pattern = /\b(eslint)\b/g; // <-- If package belong to eslint, we want to import it to the other packages.json
+// const pattern = /\b(eslint)\b/g; // <-- If package belong to eslint, we want to import it to the other packages.json
 for (const [key, value] of Object.entries(sharedPackage.devDependencies)) {
   console.log("Value", value);
-  if (pattern.test(key)) {
+  if (key.includes("eslint")) {
     localPackage.devDependencies[key] = value;
   }
 }
