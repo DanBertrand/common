@@ -5,12 +5,7 @@
   "repository": "https://github.com/DanBertrand/common.git",
   "main": "dist/index.ts",
   "files": [
-    "dist",
-    "index.ts",
-    "tsconfig.json",
-    ".eslintrc.json",
-    "merge.js",
-    "merge.sh"
+    "dist"
   ],
   "engines": {
     "node": ">=16.14.0 <=17.4.0"
