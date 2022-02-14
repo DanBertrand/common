@@ -7,11 +7,11 @@ const getLocalPackageJsonPath = (absolutePath) => {
   const lastIncludedDir = dirs[dirs.indexOf("node_modules") - 1]; // last included directory; directory BEFORE node_modules
   let localPackagePath = "";
   dirs.some((dir) => {
-    localPackagePath += `${dir}`;
+    localPackagePath += `${dir}/`;
     return dir === lastIncludedDir;
   });
 
-  return localPackagePath + "/package.json";
+  return localPackagePath + "package.json";
 };
 
 const packageJsonPath = getLocalPackageJsonPath(absolutePath);
