@@ -6,10 +6,8 @@ if (!fs.existsSync(localePackagePath)) return;
 const sharedPackage = require("./package.json");
 const localPackage = require(localePackagePath);
 
-// Create empty peerDependencies if doesnt exist
-if (!localPackage.peerDependencies) {
-  localPackage.peerDependencies = {};
-}
+// Empty or create the peerDependencies
+localPackage.peerDependencies = {};
 
 // Merge dependencies to the the locale package.json peerDependencies when the package is downloaded
 Object.assign(localPackage.peerDependencies, sharedPackage.dependencies);
