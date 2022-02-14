@@ -2,7 +2,7 @@
   "name": "@borabora/common",
   "version": "1.0.0",
   "description": "Contains all dependencies and configurations to share with projects in borabora",
-  "repository": "git@gitlab.com:azeti1/borabora/commons.git",
+  "repository": "https://github.com/DanBertrand/common.git",
   "main": "dist/index.ts",
   "files": [
     "dist",
