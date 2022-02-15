@@ -9,7 +9,7 @@
     "index.ts",
     "tsconfig.json",
     ".eslintrc.json",
-    ".prettierrc",
+    ".prettierrc.json",
     "merge.js",
     "merge.sh"
   ],
