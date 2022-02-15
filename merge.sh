@@ -3,6 +3,11 @@ SCRIPT=$(readlink -f "$0")
 echo "Absolute path to this script" $SCRIPTPATH
 # Absolute path this script is in, thus /home/user/bin
 SCRIPTPATH=$(dirname "$SCRIPT")
-echo "Absolute path this script is in" $SCRIPTPATH
+echo 'Absolute path this script is in' $SCRIPTPATH
+echo $DIR
 
 node merge.js $SCRIPTPATH
+
+
+#  TO BE DONE ....
+

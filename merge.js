@@ -6,6 +6,8 @@ const getLocalPackageJsonPath = (absolutePath) => {
   const dirs = absolutePath.split("/");
   const lastIncludedDir = dirs[dirs.indexOf("node_modules") - 1]; // last included directory; directory BEFORE node_modules
   let localPackagePath = "";
+
+  // TO IMPROVE  no need loop /
   dirs.some((dir) => {
     localPackagePath += `${dir}/`;
     return dir === lastIncludedDir;
@@ -46,8 +48,5 @@ fs.writeFileSync(packageJsonPath, JSON.stringify(localPackage, null, 2));
 
 // prettier condig + extend eslint
 //  name of the plugin
-
-// common need to be build and hosted on Github
-//  then get this repo with git URL + tag and try to import
 
 // argument on shell script pass (not using path anymore )
