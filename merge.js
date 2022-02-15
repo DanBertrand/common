@@ -2,15 +2,14 @@ const fs = require("fs");
 const path = require("path");
 const absolutePath = path.dirname(__dirname);
 
-const getLocalPackageJsonPath = (absolutePath) => {
+const getLocalPackageJsonPath = absolutePath => {
   const dirs = absolutePath.split("/");
-  const lastIncludedDir = dirs[dirs.indexOf("node_modules") - 1]; // last included directory; directory BEFORE node_modules
+  const lastIncludedIndex = dirs.indexOf("node_modules") - 1;
   let localPackagePath = "";
-
   // TO IMPROVE  no need loop /
-  dirs.some((dir) => {
+  dirs.some((dir, ix) => {
     localPackagePath += `${dir}/`;
-    return dir === lastIncludedDir;
+    return ix === lastIncludedIndex;
   });
 
   return localPackagePath + "package.json";
