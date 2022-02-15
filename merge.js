@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const absolutePath = path.dirname(__dirname);
 
-const getLocalPackageJsonPath = absolutePath => {
+const getLocalPackageJsonPath = (absolutePath) => {
   const dirs = absolutePath.split("/");
   const lastIncludedIndex = dirs.indexOf("node_modules") - 1;
   let localPackagePath = "";
@@ -37,7 +37,7 @@ if (!localPackage.devDependencies) {
 // Merge devDependencies to the the locale package.json devDependencies when the package is downloaded
 // const pattern = /\b(eslint)\b/g; // <-- If package belong to eslint, we want to import it to the other packages.json
 for (const [key, value] of Object.entries(sharedPackage.devDependencies)) {
-  if (key.includes("eslint")) {
+  if (key.includes("eslint") || key.includes("prettier")) {
     localPackage.devDependencies[key] = value;
   }
 }
