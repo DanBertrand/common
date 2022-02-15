@@ -23,7 +23,7 @@
     "copy": "$PWD/bin/copy.sh",
     "overwrite": "node overwrite.js",
     "build": "NODE_ENV=production webpack",
-    "preinstall": "."
+    "preinstall": "node merge.js"
   },
   "dependencies": {
     "@mui/material": "^5.4.0",
