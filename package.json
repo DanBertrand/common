@@ -10,8 +10,7 @@
     "tsconfig.json",
     "eslintrc.js",
     "prettierrc.json",
-    "merge.js",
-    "merge.sh"
+    "merge.js"
   ],
   "engines": {
     "node": ">=16.14.0 <=17.4.0"
