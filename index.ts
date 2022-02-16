@@ -1,7 +1,5 @@
 import tsconfig from "./tsconfig.json";
-import eslintConfig from "./eslintrc.json";
-
-export { tsconfig, eslintConfig };
+export { tsconfig };
 
 const hello = (): number => {
   return 2;
