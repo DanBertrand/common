@@ -6,6 +6,7 @@
   "main": "dist/index.ts",
   "files": [
     "dist",
+    ".vscode",
     "index.ts",
     "tsconfig.json",
     "eslintrc.js",
