@@ -2,7 +2,7 @@ const path = require("path");
 
 module.exports = {
   mode: process.env.NODE_ENV === "production" ? "production" : "development",
-  entry: "./index.ts",
+  entry: ".",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
