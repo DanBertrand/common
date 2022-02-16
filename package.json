@@ -8,7 +8,7 @@
     "dist",
     "index.ts",
     "tsconfig.json",
-    ".eslintrc.js",
+    "eslintrc.js",
     "prettierrc.json",
     "merge.js"
   ],
