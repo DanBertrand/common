@@ -27,7 +27,7 @@ const localPackage = require(packageJsonPath);
 localPackage.peerDependencies = {};
 
 // Merge dependencies to the the locale package.json peerDependencies when the package is downloaded
-Object.assign(localPackage.peerDependencies, sharedPackage.dependencies);
+Object.assign(localPackage.dependencies, sharedPackage.dependencies);
 
 // Create empty devDependencies if doesnt exist
 if (!localPackage.devDependencies) {
