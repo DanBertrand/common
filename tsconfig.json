@@ -2,9 +2,9 @@
   "compilerOptions": {
     "sourceMap": true,
     "target": "es5",
-    "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": false,
+    "allowJs": false,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
@@ -12,6 +12,8 @@
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": false
-  }
+    "isolatedModules": true
+  },
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules", "dist"]
 }
