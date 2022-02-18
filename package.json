@@ -26,6 +26,8 @@
     "preinstall": "node merge.js"
   },
   "dependencies": {
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
     "@mui/material": "^5.4.0",
     "@sentry/react": "^6.17.4",
     "@sentry/tracing": "^6.17.4",
